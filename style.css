@@ -1,8 +1,8 @@
 :root {
   --gradient-glow: red, orange, yellow, green, #2e75fb, purple, red;
-  --glow-size: 1rem;
-  --glow-intensity: 0.125;
-  --border-width: 3px;
+  --glow-size: 1.1rem;
+  --glow-intensity: 0.2;
+  --border-width: 4px;
 }
 body {
   margin: 0;
@@ -45,7 +45,7 @@ ul, li {
   border: var(--border-width, 5px) solid transparent;
   border-left: 0;
   border-radius: 0 100vw 100vw 0;
-  background: linear-gradient(Canvas 0 0) padding-box, conic-gradient(from var(--glow-deg), var(--gradient-glow)) border-box;  
+  background: linear-gradient(canvas 0 0) padding-box, conic-gradient(from var(--glow-deg), var(--gradient-glow)) border-box;  
   position: relative;
   isolation: isolate;
   animation: glow 10s infinite linear;
@@ -60,7 +60,7 @@ ul, li {
 
 .glowing-border::before{
   z-index: -1;
-  background: Canvas;
+  background: canvas;
   inset: 0.5rem;
   scale: 1.2 1;
   transform-origin: right;
@@ -69,7 +69,7 @@ ul, li {
 
 .glowing-border::after {
   z-index: -2;
-  background: conic-gradient(from -90deg, var(--gradient-glow));
+  background: conic-gradient(from var(--glow-deg), var(--gradient-glow));
   filter: blur(var(--glow-size, 0.75rem));
   inset: -0.75rem;
   opacity: var(--glow-intensity, 0.25rem);
