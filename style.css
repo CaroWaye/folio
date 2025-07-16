@@ -4,6 +4,12 @@
   --glow-intensity: 0.2;
   --border-width: 4px;
 }
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 body {
   margin: 0;
   font-family: Roboto, Helvetica, Arial, sans-serif;
@@ -21,6 +27,7 @@ a {
   width: fit-content;
   border-radius: 1rem;
   margin-bottom: 1rem;
+  text-wrap: nowrap;
 }
 ul, li {
   list-style: none;
@@ -85,14 +92,17 @@ ul, li {
     transform-origin: left;
   }
 }
-.folio {
-  margin-left: 2.9375rem;
-}
+
+
 
 @media (max-width: 600px) {
   .glowing-border {
     padding: 3rem;
     margin-right: 1rem;
+  }
+  .glowing-border.right {
+    margin-right: 0;
+    margin-left: 1rem;
   }
   h1 {
     font-size: 1.375rem;
@@ -102,5 +112,24 @@ ul, li {
   }
   p {
     font-size: 1rem;
+  }
+}
+
+main {
+  width: 100vw;
+  max-width: 1100px;
+}
+@media (min-width: 1100px) {
+  main {
+    display: flex;
+    align-items: center;
+  }
+  .glowing-border.right,
+  .glowing-border::after,
+  .glowing-border::before {
+    all: unset;
+  }
+  .glowing-border.right {
+    margin-left: 4rem;
   }
 }
