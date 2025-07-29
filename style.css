@@ -6,6 +6,7 @@
 }
 html {
   box-sizing: border-box;
+  overflow: clip;
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -88,14 +89,19 @@ ul, li {
   border: var(--border-width, 5px) solid transparent;
   border-right: 0;
 
+  &::after {
+    max-width: calc(100dvw - 0.75rem);
+  }
+
   &::before {
     transform-origin: left;
+    inset: unset;
   }
 }
 
 
 
-@media (max-width: 600px) {
+@media (max-width: 37.5rem) {
   .glowing-border {
     padding: 3rem;
     margin-right: 1rem;
@@ -114,12 +120,7 @@ ul, li {
     font-size: 1rem;
   }
 }
-
-main {
-  width: 100vw;
-  max-width: 1100px;
-}
-@media (min-width: 1100px) {
+@media (min-width: 68.75rem) {
   main {
     display: flex;
     align-items: center;
