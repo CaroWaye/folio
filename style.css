@@ -4,20 +4,18 @@
   --glow-intensity: 0.2;
   --border-width: 4px;
 }
-html {
-  box-sizing: border-box;
-  overflow: clip;
-}
 *, *:before, *:after {
   box-sizing: inherit;
 }
 body {
   margin: 0;
   font-family: Roboto, Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+  overflow: clip;
 }
 h1, h2, p, a {
-        font-family: Roboto, Helvetica, Arial, sans-serif;
-        }
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  }
 a {
   font-size: 0.875rem;
   display: block;
@@ -48,7 +46,7 @@ ul, li {
 
 .glowing-border {
   margin-block: 3rem;
-  padding: 5rem 3rem;
+  padding: 3rem;
   max-width: 60ch;
   border: var(--border-width, 5px) solid transparent;
   border-left: 0;
@@ -57,6 +55,7 @@ ul, li {
   position: relative;
   isolation: isolate;
   animation: glow 10s infinite linear;
+  overflow: clip;
 }
 
 .glowing-border::before,
@@ -69,7 +68,7 @@ ul, li {
 .glowing-border::before{
   z-index: -1;
   background: canvas;
-  inset: 0.5rem;
+  inset: unset;
   scale: 1.2 1;
   transform-origin: right;
   filter: blur(var(--glow-size, 0.75rem))
@@ -88,7 +87,6 @@ ul, li {
   border-radius: 100vw 0 0 100vw;
   border: var(--border-width, 5px) solid transparent;
   border-right: 0;
-
   &::after {
     max-width: calc(100dvw - 0.75rem);
   }
