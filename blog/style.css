@@ -16,6 +16,13 @@ body {
 h1 {
   margin-bottom: 2rem;
 }
+hr {
+  border: none;
+  background-color: pink;
+  height: 2px;
+  width: 50%;
+  margin: 1rem 0;
+}
 blockquote {
   font-family: Georgia, 'Times New Roman', serif; /* or a system sans-serif stack */
   font-size: 1rem;          /* 16px base — don't go below */
