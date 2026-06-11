@@ -53,7 +53,7 @@ ul, li {
   background: linear-gradient(canvas 0 0) padding-box, conic-gradient(from var(--glow-deg), var(--gradient-glow)) border-box;  
   position: relative;
   isolation: isolate;
-  animation: glow 10s infinite linear;
+  animation: glow 2s infinite linear;
   overflow: clip;
 }
 
