@@ -10,3 +10,6 @@ cp .env.example .env
 ```bash
 ./deploy
 ```
+
+## Notes
+- Glowing rainbow border inspired by this codepen: https://codepen.io/kevinpowell/pen/WbbXRPL
