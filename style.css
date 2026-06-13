@@ -92,7 +92,7 @@ li {
 
 .glowing-border.right {
   margin-inline-start: auto;
-  border-radius: 100vw 0 0 100vw;
+  border-radius: 10px 0 0 10px;
   border: var(--border-width, 5px) solid transparent;
   border-right: 0;
   &::after {
@@ -138,5 +138,6 @@ li {
   }
   .glowing-border.right {
     margin-left: 4rem;
+    margin-top: 3rem;
   }
 }
